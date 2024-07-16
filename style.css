@@ -1,0 +1,36 @@
+*{
+    background-color: #1c1966;
+    color: white;
+}
+
+body{
+    margin: 30px;
+}
+.bg-color{
+    background-color: #11123f;
+}
+
+.flex{
+    display: flex;
+    flex-direction: row;
+}
+.currtmp{
+    font-size: 7cap;
+}
+
+.padding-30{
+    padding: 30px;
+}
+
+.round1{
+    border-radius: 20px;
+}
+
+.leftbox{
+    flex-direction: column;
+    gap: 30px;
+    display: flex;
+}
+.bg-uni{
+background-color: #1c1966;
+}

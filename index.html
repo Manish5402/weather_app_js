@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Weather App</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 leftbox bg-color">
+
+                <div class="input-group mb-3 bg-color p-4">
+                    <input type="search" class="form-control citysearch pr-4 rounded-pill bg-light border-0"
+                        placeholder="City Name..." aria-label="Search">
+                    <button class="btn btn-outline-secondary sbtn rounded-pill" type="submit">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-search" viewBox="0 0 16 16">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                        </svg>
+                    </button>
+                </div>
+
+
+                <div class="container round1 padding-30 d-flex justify-content-center align-items-center">
+                    <h1 class="text-center currtmp ">Enter City </h1>
+                </div>
+                <div class="desc d-flex round1 padding-30 justify-content-center">
+                    <h2 class="location"> - </h2>
+                </div>
+                <div class="card w-100 border-0 shadow-sm mb-4">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center">
+                            <svg class="mr-3" width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M12 4l-1.35 6.9h3.7l-2.12 8.65h-3.7l1.35-6.9z" />
+                            </svg>
+                            <div>
+                                <h4 class="card-title mb-0">Feels Like</h4>
+                                <h5 class="card-text flike"></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card w-100 border-0 shadow-sm mb-4">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center">
+                            <svg class="mr-3" width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M12 4l-1.35 6.9h3.7l-2.12 8.65h-3.7l1.35-6.9z" />
+                            </svg>
+                            <div>
+                                <h4 class="card-title mb-0">Weather</h4>
+                                <h5 class="card-text wdesc"></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card w-100 border-0 shadow-sm mb-4">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center">
+                            <svg class="mr-3" width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M12 4l-1.35 6.9h3.7l-2.12 8.65h-3.7l1.35-6.9z" />
+                            </svg>
+                            <div>
+                                <h4 class="card-title mb-0">country</h4>
+                                <h5 class="card-text cntry"></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class=" padding-30 col-xl-8 col-lg-8 col-md-12 col-sm-12 rightbox bg-color">
+
+                <div class="row m-4 bg-color">
+                    <div class="col-md-6 bg-color">
+                        <div class="card text-center bg-uni round1"
+                            style="width: 100%; height: 150px; box-shadow: 0 0 20px rgba(241, 235, 235, 0.629); border: none; ">
+                            <div class="card-body">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
+                                    <path d="M12 22C14.7614 22 17 19.7614 17 17C17 15.3644 16.2147 13.9122 15.0005 13V5.00049C15.0005 4.06815 15.0005 3.60198 14.8481 3.23428C14.6451 2.74451 14.256 2.35537 13.7662 2.15239C13.3985 2 12.9323 2 12 2C11.0677 2 10.6015 2 10.2338 2.15239C9.74402 2.35537 9.35488 2.74451 9.1519 3.23428C8.99951 3.60198 8.99951 4.06815 8.99951 5.00049V13C7.78534 13.9122 7 15.3644 7 17C7 19.7614 9.23858 22 12 22Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                                    <path d="M12 15C10.8954 15 10 15.8954 10 17C10 18.1046 10.8954 19 12 19C13.1046 19 14 18.1046 14 17C14 15.8954 13.1046 15 12 15ZM12 15V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <h5 class="card-title">Min temprature</h5>
+                                <p class="card-text mint"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 bg-color">
+                        <div class="card text-center bg-uni round1"
+                            style="width: 100%; height: 150px; box-shadow: 0 0 20px rgba(241, 235, 235, 0.629); border: none; ">
+                            <div class="card-body">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
+                                    <path d="M12 22C14.7614 22 17 19.7614 17 17C17 15.3644 16.2147 13.9122 15.0005 13V5.00049C15.0005 4.06815 15.0005 3.60198 14.8481 3.23428C14.6451 2.74451 14.256 2.35537 13.7662 2.15239C13.3985 2 12.9323 2 12 2C11.0677 2 10.6015 2 10.2338 2.15239C9.74402 2.35537 9.35488 2.74451 9.1519 3.23428C8.99951 3.60198 8.99951 4.06815 8.99951 5.00049V13C7.78534 13.9122 7 15.3644 7 17C7 19.7614 9.23858 22 12 22Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                                    <path d="M12 15C10.8954 15 10 15.8954 10 17C10 18.1046 10.8954 19 12 19C13.1046 19 14 18.1046 14 17C14 15.8954 13.1046 15 12 15ZM12 15V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <h5 class="card-title">Max temprature</h5>
+                                <p class="card-text maxt"></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="row m-4 bg-color">
+                    <div class="col-md-6 bg-color">
+                        <div class="card text-center bg-uni round1"
+                            style="width: 100%; height: 150px; box-shadow: 0 0 20px rgba(241, 235, 235, 0.629); border: none; ">
+                            <div class="card-body">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                                    color="#000000" fill="none">
+                                    <path
+                                        d="M3.5 13.678C3.5 9.49387 7.08079 5.35907 9.59413 2.97222C10.9591 1.67593 13.0409 1.67593 14.4059 2.97222C16.9192 5.35907 20.5 9.49387 20.5 13.678C20.5 17.7804 17.2812 22 12 22C6.71878 22 3.5 17.7804 3.5 13.678Z"
+                                        stroke="currentColor" stroke-width="1.5" />
+                                    <path
+                                        d="M4 12.284C5.46463 11.8303 8.39159 11.6836 11.9842 13.7016C15.57 15.7157 18.516 14.9984 20 14.1354"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                <h5 class="card-title">Humidity</h5>
+                                <p class="card-text humi"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 bg-color">
+                        <div class="card text-center bg-uni round1"
+                            style="width: 100%; height: 150px; box-shadow: 0 0 20px rgba(241, 235, 235, 0.629); border: none; ">
+                            <div class="card-body">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
+                                    <path d="M9 13H9.80031C10.4304 13 10.7454 13 10.9985 13.1493C11.2517 13.2987 11.3926 13.5677 11.6743 14.1056L13.1905 17L15.2857 11L16.8018 13.8944C17.0836 14.4323 17.2245 14.7013 17.4777 14.8507C17.7308 15 18.0458 15 18.6759 15H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M20.5 12C19.732 8.4154 16.7237 5.03871 14.5241 2.97222C13.1443 1.67593 11.04 1.67593 9.66019 2.97222C7.11961 5.35907 3.5 9.49387 3.5 13.678C3.5 17.7804 6.75366 22 12.0921 22C15.4851 22 18.0359 20.2955 19.4444 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                                </svg>
+                                <h5 class="card-title">Pressure</h5>
+                                <p class="card-text pressure"></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="row m-4 bg-color">
+                    <div class="col-md-6 bg-color">
+                        <div class="card text-center bg-uni round1"
+                            style="width: 100%; height: 150px; box-shadow: 0 0 20px rgba(241, 235, 235, 0.629); border: none; ">
+                            <div class="card-body">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
+                                    <path d="M21 5.63247C19.8635 4.81397 18.4095 4.81397 17.273 5.63247C16.5877 6.13474 15.6685 6.11614 14.9833 5.61388C13.8468 4.79537 12.3928 4.79537 11.273 5.61388C10.571 6.11614 9.68524 6.11614 9 5.61388" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                                    <path d="M3 9.37672C4.16839 10.1953 5.66323 10.1953 6.83162 9.37672C7.53608 8.87443 8.46392 8.87443 9.16838 9.37672C10.3368 10.1953 11.8488 10.2139 13 9.39531" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                                    <path d="M21 14.6233C19.8635 13.8047 18.4095 13.8047 17.273 14.6233C16.5877 15.1256 15.6852 15.1256 15 14.6233C13.8635 13.8047 12.3928 13.7861 11.273 14.6047C10.571 15.107 9.68524 15.107 9 14.6047" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                                    <path d="M3 18.3767C4.16839 19.1953 5.66323 19.1953 6.83162 18.3767C7.53608 17.8744 8.46392 17.8744 9.16838 18.3767C10.3368 19.1953 11.8488 19.2139 13 18.3953" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                                </svg>
+                                <h5 class="card-title">Wind Speed</h5>
+                                <p class="card-text windspd"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 bg-color">
+                        <div class="card text-center bg-uni round1"
+                            style="width: 100%; height: 150px; box-shadow: 0 0 20px rgba(241, 235, 235, 0.629); border: none; ">
+                            <div class="card-body">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
+                                    <path d="M21 5.63247C19.8635 4.81397 18.4095 4.81397 17.273 5.63247C16.5877 6.13474 15.6685 6.11614 14.9833 5.61388C13.8468 4.79537 12.3928 4.79537 11.273 5.61388C10.571 6.11614 9.68524 6.11614 9 5.61388" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                                    <path d="M3 9.37672C4.16839 10.1953 5.66323 10.1953 6.83162 9.37672C7.53608 8.87443 8.46392 8.87443 9.16838 9.37672C10.3368 10.1953 11.8488 10.2139 13 9.39531" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                                    <path d="M21 14.6233C19.8635 13.8047 18.4095 13.8047 17.273 14.6233C16.5877 15.1256 15.6852 15.1256 15 14.6233C13.8635 13.8047 12.3928 13.7861 11.273 14.6047C10.571 15.107 9.68524 15.107 9 14.6047" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                                    <path d="M3 18.3767C4.16839 19.1953 5.66323 19.1953 6.83162 18.3767C7.53608 17.8744 8.46392 17.8744 9.16838 18.3767C10.3368 19.1953 11.8488 19.2139 13 18.3953" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                                </svg>
+                                <h5 class="card-title">Wind Degree</h5>
+                                <p class="card-text winddeg"></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="row m-4 bg-color">
+                    <div class="col-md-6 bg-color">
+                        <div class="card text-center bg-uni round1"
+                            style="width: 100%; height: 150px; box-shadow: 0 0 20px rgba(241, 235, 235, 0.629); border: none; ">
+                            <div class="card-body">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
+                                    <path d="M9.5 6.5C9.99153 5.9943 11.2998 4 12 4M14.5 6.5C14.0085 5.9943 12.7002 4 12 4M12 4V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M18.3633 10.6357L16.9491 12.05" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                                    <path d="M3 17H5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                                    <path d="M5.63657 10.6356L7.05078 12.0498" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                                    <path d="M21 17H19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                                    <path d="M21 20H3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                                    <path d="M16 17C16 14.7909 14.2091 13 12 13C9.79086 13 8 14.7909 8 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                                </svg>
+                                <h5 class="card-title">SunRise</h5>
+                                <p class="card-text sunrise"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 bg-color">
+                        <div class="card text-center bg-uni round1"
+                            style="width: 100%; height: 150px; box-shadow: 0 0 20px rgba(241, 235, 235, 0.629); border: none; ">
+                            <div class="card-body">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
+                                    <path d="M9.5 7.5C9.99153 8.0057 11.2998 10 12 10M14.5 7.5C14.0085 8.0057 12.7002 10 12 10M12 10V4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M18.3633 10.6357L16.9491 12.05" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                                    <path d="M3 17H5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                                    <path d="M5.63657 10.6356L7.05078 12.0498" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                                    <path d="M21 17H19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                                    <path d="M21 20H3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                                    <path d="M16 17C16 14.7909 14.2091 13 12 13C9.79086 13 8 14.7909 8 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                                </svg>
+                                <h5 class="card-title">SunSet</h5>
+                                <p class="card-text sunset"></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
